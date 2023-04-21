@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Trabajo
 build_property.RootNamespace = Trabajo
-build_property.ProjectDir = D:\netcore\Trabajo\
+build_property.ProjectDir = C:\Users\sandr\OneDrive\Escritorio\Clon\Trabajo-Grupo-marron\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\netcore\Trabajo
+build_property.MSBuildProjectDirectory = C:\Users\sandr\OneDrive\Escritorio\Clon\Trabajo-Grupo-marron
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/netcore/Trabajo/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Contacto/Create.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Contacto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Home/Index.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Home/Privacy.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Shared/Error.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/_ViewImports.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/_ViewStart.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/netcore/Trabajo/Views/Shared/_Layout.cshtml]
+[C:/Users/sandr/OneDrive/Escritorio/Clon/Trabajo-Grupo-marron/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-26tp73an8d

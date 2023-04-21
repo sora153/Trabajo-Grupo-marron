@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\netcore\\Trabajo\\Trabajo.csproj": {}
+    "C:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj": {}
   },
   "projects": {
-    "D:\\netcore\\Trabajo\\Trabajo.csproj": {
+    "C:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\netcore\\Trabajo\\Trabajo.csproj",
+        "projectUniqueName": "C:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj",
         "projectName": "Trabajo",
-        "projectPath": "D:\\netcore\\Trabajo\\Trabajo.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\netcore\\Trabajo\\obj\\",
+        "projectPath": "C:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj",
+        "packagesPath": "C:\\Users\\sandr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sandr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -59,6 +59,10 @@
               "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
