@@ -314,3 +314,8 @@ D:\netcore\Trabajo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Commo
 D:\netcore\Trabajo\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\netcore\Trabajo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\netcore\Trabajo\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\netcore\Trabajo\bin\Debug\net7.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\netcore\Trabajo\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+D:\netcore\Trabajo\bin\Debug\net7.0\StackExchange.Redis.dll
+D:\netcore\Trabajo\bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll
+D:\netcore\Trabajo\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
