@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\netcore\\Trabajo\\Trabajo.csproj": {}
+    "D:\\netcore\\Trabajo\\Trabajo.csproj": {}
   },
   "projects": {
-    "d:\\netcore\\Trabajo\\Trabajo.csproj": {
+    "D:\\netcore\\Trabajo\\Trabajo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\netcore\\Trabajo\\Trabajo.csproj",
+        "projectUniqueName": "D:\\netcore\\Trabajo\\Trabajo.csproj",
         "projectName": "Trabajo",
-        "projectPath": "d:\\netcore\\Trabajo\\Trabajo.csproj",
+        "projectPath": "D:\\netcore\\Trabajo\\Trabajo.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "d:\\netcore\\Trabajo\\obj\\",
+        "outputPath": "D:\\netcore\\Trabajo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
