@@ -11639,19 +11639,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sandr\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj",
+      "projectUniqueName": "D:\\netcore\\Trabajo\\Trabajo.csproj",
       "projectName": "Trabajo",
-      "projectPath": "c:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\Trabajo.csproj",
-      "packagesPath": "C:\\Users\\sandr\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\sandr\\OneDrive\\Escritorio\\Clon\\Trabajo-Grupo-marron\\obj\\",
+      "projectPath": "D:\\netcore\\Trabajo\\Trabajo.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\netcore\\Trabajo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sandr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
