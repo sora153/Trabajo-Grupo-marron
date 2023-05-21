@@ -4,6 +4,7 @@ using Trabajo.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using StackExchange.Redis;
 using Trabajo.Service;
+using Trabajo.Integration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ProductoService, ProductoService>();
+builder.Services.AddScoped<CurrencyExchangeApiIntegration, CurrencyExchangeApiIntegration>();
 
 builder.Services.AddStackExchangeRedisCache(options =>
     {
