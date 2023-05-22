@@ -21,9 +21,9 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                  <p class="card-text">@Html.DisplayFor(modelItem => item.Precio)</p>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Add</a>
-                  <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
+                   <p class="card-text">S/@Html.DisplayFor(modelItem => item.Precio)</p>
+                  <a class="btn btn-dark btn-lg" asp-action="Details" asp-route-id="@item.Id">Ver más</a>
+                  <a class="btn btn-danger btn-lg" asp-action="Add" asp-route-id="@item.Id">Añadir al Carrito</a>
                 </div>
               </div>
             </div>
