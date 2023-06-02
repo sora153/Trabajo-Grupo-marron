@@ -22,15 +22,17 @@
                     <input asp-for="Cantidad" class="form-control" />
                 </div>                
                 <div class="form-group text-center">
-                    <button type="submit" class="btn btn-primary">Cambio</button>
+                    <button type="submit" class="btn btn-danger btn-lg">Cambio</button>
                 </div>
             </form>
              <h1>Tipo Cambio: @ViewData["rate"]</h1>
+             <br>
              <h1>Cambio Total: @ViewData["cambio"]</h1>
              <div>
-                
+                <br>
             <a href="https://www.globalexchange.ec/es/monedas-del-mundo">¿No sabes la abreviatura de tu moneda?</a>
             </div>
+            <br>
     <div>
         <a asp-action="Index">Back to List</a>
     </div>
