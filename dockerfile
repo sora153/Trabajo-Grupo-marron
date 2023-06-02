@@ -11,6 +11,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENV APP_NET_CORE /obj/Debug/net7.0/trabajo.dll
+ENV APP_NET_CORE /app/out/trabajo.dll
 
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
