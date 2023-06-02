@@ -39,5 +39,5 @@ jobs:
           curl -H "Authorization: Bearer $TOKEN" \
             -H "Content-Type: application/json" \
             -X POST \
-            -d '{"imageName":"fduartej1/appfunko:latest","name":"appfunko"}' \
+            -d '{"imageName":"sora153/Trabajo-Grupo-marron:latest","name":"Trabajo-Grupo-marron"}' \
             https://render.com/api/v1/services
