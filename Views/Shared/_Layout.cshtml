@@ -1,100 +1,110 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Motopart</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Trabajo.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">motopart</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
-                        </li>         
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
-                        </li>  
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted" style="position: absolute; bottom: 0; width: 100%; height: 60px;">
-        <div class="container-fluid">
-            <div class="row p-5 pb-2 bg-dark text-white">
-              <div class="col-xs-12 col-md-6 col-lg-3">
-                <p class="h3">MotoPart</p>
-                <p class="text-secondary">Grupo Marron</p>
-              </div>
-              <div class="col-xs-12 col-md-6 col-lg-3">
-               <p class="h5 mb-3">Link</p>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-               </div>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
-               </div>
-                <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
-               </div>
-              </div>
-               <div class="col-xs-12 col-md-6 col-lg-3">
-               <p class="h5 mb-3">Productos</p>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">IPONE</a>
-               </div>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">MOTUL</a>
-               </div>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">XADO</a>
-               </div>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">LIQUIMOLY</a>
-               </div>
-              </div>
-              <div class="col-xs-12 col-md-6 col-lg-3">
-               <p class="h5 mb-3">Contacto</p>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">Facebook</a>
-               </div>
-               <div class="mb-1">
-                 <a class="text-secondary text-decoration-none" href="#">Instagram</a>
-               </div>
-              </div>
-              <div class="col-xs-12 pt-3">
-                  <p class="text-white text-center">Copyright - Todos los derechos reservados 2023</p>
-              </div>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - Motopart</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/Trabajo.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+          <img src="~/imagenes/logo.jpg" alt="" width="230" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+          <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
+            </li>
+          </ul>
+          <partial name="_LoginPartial" />
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <main role="main" class="pb-3">
+      @RenderBody()
+    </main>
+  </div>
+
+  <footer class="border-top footer text-muted" style="position: absolute; bottom: 0; width: 100%; height: 60px;">
+    <div class="container-fluid">
+      <div class="row p-5 pb-2 bg-dark text-white">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/imagenes/logo2.jpg" alt="" width="230" height="50">
+          </a>
+          <p class="text-secondary">Grupo Marron</p>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <p class="h5 mb-3">Link</p>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Home"
+              asp-action="Index">Inicio</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Catalogo"
+              asp-action="Index">Catalogo</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Contacto"
+              asp-action="Index">Contacto</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <p class="h5 mb-3">Productos</p>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">IPONE</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">MOTUL</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">XADO</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">LIQUIMOLY</a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <p class="h5 mb-3">Contacto</p>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">Facebook</a>
+          </div>
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" href="#">Instagram</a>
+          </div>
+        </div>
+        <div class="col-xs-12 pt-3">
+          <p class="text-white text-center">Copyright - Todos los derechos reservados 2023</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
