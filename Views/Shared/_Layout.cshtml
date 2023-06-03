@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/Trabajo.styles.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/all.min.css">
+  <link rel="stylesheet" href="~/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -51,7 +53,7 @@
       @RenderBody()
     </main>
   </div>
-
+<br>
   <footer class="border-top footer text-muted" style="position: absolute; bottom: 0; width: 100%; height: 60px;">
     <div class="container-fluid">
       <div class="row p-5 pb-2 bg-dark text-white">
@@ -59,7 +61,8 @@
           <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
             <img src="~/imagenes/logo4.png" alt="" width="230" height="50">
           </a>
-          <p class="text-secondary">Grupo Marron</p>
+          <br>
+          <a class="h5 text-white text-decoration-none">Grupo Marron</a>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
           <p class="h5 mb-3">Link</p>
@@ -68,8 +71,19 @@
               asp-action="Index">Inicio</a>
           </div>
           <div class="mb-1">
+            <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Home"
+              asp-action="Privacy">Nosotros</a>
+
+          </div>
+          <div class="mb-1">
             <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Catalogo"
               asp-action="Index">Catalogo</a>
+          </div>
+
+          <div class="mb-1">
+            <a class="text-secondary text-decoration-none" asp-area="" asp-controller="TipoCambio"
+              asp-action="Index">Modena de
+              cambio</a>
           </div>
           <div class="mb-1">
             <a class="text-secondary text-decoration-none" asp-area="" asp-controller="Contacto"
@@ -92,7 +106,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-3">
-          <p class="h5 mb-3">Contacto</p>
+          <p class="h5 mb-3">Contactenos</p>
           <div class="mb-1">
             <a class="text-secondary text-decoration-none" href="#">Facebook</a>
           </div>
@@ -109,6 +123,8 @@
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
+  <script src="~/js/all.min.js"></script>
+  <script src="~/js/fontawesome.min.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
 </body>
 
