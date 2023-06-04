@@ -4,7 +4,8 @@
     ViewData["Title"] = "Detalles del Producto";
 }
 
-    <h1>Details</h1>
+    <h1>Detalles</h1>
+    <br>
     <div class="container">
             <div class="col-sm-4">
               <div class="card mb-3">
@@ -18,7 +19,7 @@
                   <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
                   <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Add</a>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir al Carrito</a>
                 </div>
               </div>
             </div>
