@@ -13,13 +13,17 @@ namespace Trabajo.Controllers
     public class MotosApiController : Controller
     {
         private readonly ILogger<MotosApiController> _logger;
-        private readonly CurrencyExchangeApiIntegration _currency;
+        
+        private readonly  MotorcycleSpecsDatabase _client;
+        private readonly   MotorcycleSpecsDatabase _request;
+        private object client;
 
         public MotosApiController(ILogger<MotosApiController> logger,
-        CurrencyExchangeApiIntegration currency)
+        MotorcycleSpecsDatabase client,MotorcycleSpecsDatabase request)
         {
             _logger = logger;
-            _currency = currency;
+            _client=client;
+            _request=request;
         }
 
         public IActionResult Index()
@@ -27,14 +31,20 @@ namespace Trabajo.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Exchange(TipoCambioDTO? tipoCambio)
+        public object GetClient()
         {
-           double rate = await _currency.GetExchangeRate(tipoCambio.From, tipoCambio.To);
-           var cambio = tipoCambio.Cantidad * rate;
-           ViewData["rate"] = rate;
-           ViewData["cambio"] = cambio;
-           return View("Index");
+            return client;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Exchange(MotosApiDTO? , object client)
+        {
+           using (var response = await client.SendAsync(request))
+{
+	    response.EnsureSuccessStatusCode();
+	    var body = await response.Content.ReadAsStringAsync();
+	    Console.WriteLine(body);
+}
         }
 
 
@@ -45,4 +55,6 @@ namespace Trabajo.Controllers
             return View("Error!");
         }
     }
+
+    
 }

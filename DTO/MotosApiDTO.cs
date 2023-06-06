@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Trabajo.DTO
 {
-    public class MotoApiDTO
+    public class MotosApiDTO
     {
         public string? Year { get; set; }
         public string? Make { get; set; }

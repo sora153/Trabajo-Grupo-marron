@@ -36,3 +36,7 @@ X-RapidAPI-Key: 0480f8b7a5mshe85c70b898a64c9p12b6eajsn98b3968305bb
 GET https://currency-exchange.p.rapidapi.com/exchange?from=PEN&to=USD&q=1.0 HTTP/1.1
 Accept: application/json
 X-RapidAPI-Key: 0480f8b7a5mshe85c70b898a64c9p12b6eajsn98b3968305bb
+
+GET https://motorcycle-specs-database.p.rapidapi.com/article/2012/BMW/F%20800%20GS%20Trophy HTTP/1.1
+Accept: application/json
+X-RapidAPI-Key: 89808bcf44mshc2b67244f0dfe73p1342b3jsn471f934c3e23
