@@ -7,66 +7,65 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Trabajo.DTO;
 using Trabajo.Integration;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Trabajo.Controllers
 {
     public class MotosApiController : Controller
     {
-        private readonly ILogger<MotosApiController> _logger;
-        
-        private readonly  MotorcycleSpecsDatabase _client;
-        private readonly   MotorcycleSpecsDatabase _request;
-        private object client;
+         static async Task Main(string[] args){
+            string apiKey = "89808bcf44mshc2b67244f0dfe73p1342b3jsn471f934c3e23";
+        string baseUrl = "https://motorcycle-specs-database.p.rapidapi.com/article";
+            
+            HttpClient client = new HttpClient();
 
-        public MotosApiController(ILogger<MotosApiController> logger,
-        MotorcycleSpecsDatabase client,MotorcycleSpecsDatabase request)
+            client.DefaultRequestHeaders.Add("X-RapidAPI-Key", apiKey);
+
+            try{
+                 HttpResponseMessage response = await client.GetAsync(baseUrl + "/2012/BMW/F%20800%20GS%20Trophy");
+
+                 if (response.IsSuccessStatusCode){
+                    
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+
+                   MotorcycleSpecsData data = JsonConvert.DeserializeObject<MotorcycleSpecsData>(jsonResponse);
+
+
+                Console.WriteLine($"Modelo: {data.Model}");
+                Console.WriteLine($"Fabricante: {data.Make}");
+                Console.WriteLine($"Año: {data.Year}");
+                Console.WriteLine($"Especificaciones: {data.Specs}");
+
+
+
+                 }else{
+
+                    Console.WriteLine($"Error en la solicitud: {response.StatusCode}");
+                 }
+            }
+            catch (Exception ex)
         {
-            _logger = logger;
-            _client=client;
-            _request=request;
+            Console.WriteLine($"Error: {ex.Message}");
         }
-
-        public IActionResult Index()
+        finally
         {
-            return View();
+            
+            client.Dispose();
         }
 
-        public object GetClient()
-        {
-            return client;
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Motos(MotosApiDTO? motosApi)
-        { 
-            var client = new HttpClient();
-            var request = new HttpRequestMessage
-            { 
-                Method = HttpMethod.Get,
-	            RequestUri = new Uri("https://motorcycle-specs-database.p.rapidapi.com/article/2012/BMW/F%20800%20GS%20Trophy"),
-	         Headers =
-	            {
-		        { "X-RapidAPI-Key", "89808bcf44mshc2b67244f0dfe73p1342b3jsn471f934c3e23" },
-		        { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
-	            },
-
-            };
-           using (var response = await client.SendAsync(request))
-{
-	    response.EnsureSuccessStatusCode();
-	    var body = await response.Content.ReadAsStringAsync();
-	    Console.WriteLine(body);
-}
-        }
-
-
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+         }
+       
     }
 
-    
+    class MotorcycleSpecsData
+{
+    public string? Model { get; set; }
+    public string? Make { get; set; }
+    public int Year { get; set; }
+    public string? Specs { get; set; }
+}
 }
