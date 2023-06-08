@@ -1,4 +1,3 @@
-
 @model IEnumerable<Trabajo.Controllers.MotosApiController>
 
 
@@ -10,20 +9,141 @@
     <h1 class="text-center mb-4">Formulario de Tipo Cambio</h1>
     <div class="row justify-content-center">
         <div class="col-md-6">
-            @foreach (var item in Model){
-            
-            
-
-
-            }
 
             <br>
             <div class="form-group text-center">
                     <button type="submit" class="btn btn-danger btn-lg">Mostrar especificaciones</button>
+                    <div>
+                    <h1>Obtener Datos de API</h1>
+                    <button onclick="obtenerDatos()">Obtener Datos</button>
+                </div>
                 </div>
             <div>
+                <select id="cboMarcas" onchange="obtenerModelosDeMotos()">
+                    <option value="">Seleccionar marca</option>
+                </select>
+                <select id="cboModelos" onchange="obtenerSpecDeMotos()">
+                    <option value="">Seleccionar modelo</option>
+                </select>
+                <textarea id="textarea1" name="textarea1" rows="4" cols="50"></textarea>
+                
         <a href="http://localhost:5208">volver al inicio</a>
     </div>
         </div>
     </div>
 </div>
+
+<script>
+        function obtenerDatos() {
+            $.ajax({
+                url: '@Url.Action("ObtenerDatosDeAPI", "MotosApi")',
+                type: 'GET',
+                success: function (data) {
+                    // Aquí puedes procesar los datos devueltos por la API y mostrarlos en la vista
+                    console.log(data);
+                },
+                error: function () {
+                    console.log('Error al obtener los datos de la API');
+                }
+            });
+        }
+
+        function obtenerModelosDeMotos() {
+            var cboMarcas = document.getElementById('cboMarcas');
+            var cboModelos = document.getElementById('cboModelos');
+            var marcaSeleccionada = cboMarcas.value;
+
+            // Realiza la solicitud AJAX al controlador para obtener los modelos de motos
+            $.ajax({
+                url: '@Url.Action("ObtenerModelosDeMotos", "MotosApi")',
+                type: 'GET',
+                data: { marca: marcaSeleccionada },
+                success: function(data) {
+                    // Limpia las opciones anteriores
+                    cboModelos.innerHTML = '';
+
+                    // Llena el combobox con los modelos de motos obtenidos
+                    for (var i = 0; i < data.length; i++) {
+                        var option = document.createElement('option');
+                        option.value = data[i].id;
+                        option.text = data[i].name;
+                        cboModelos.appendChild(option);
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    console.error('Error al obtener los modelos de motos:', errorThrown);
+                }
+            });
+        }
+
+        function obtenerModelosDeMotos() {
+            var cboMarcas = document.getElementById('cboMarcas');
+            var cboModelos = document.getElementById('cboModelos');
+            var marcaSeleccionada = cboMarcas.value;
+
+            // Realiza la solicitud AJAX al controlador para obtener los modelos de motos
+            $.ajax({
+                url: '@Url.Action("ObtenerModelosDeMotos", "MotosApi")',
+                type: 'GET',
+                data: { marca: marcaSeleccionada },
+                success: function(data) {
+                    // Limpia las opciones anteriores
+                    cboModelos.innerHTML = '';
+
+                    // Llena el combobox con los modelos de motos obtenidos
+                    for (var i = 0; i < data.length; i++) {
+                        var option = document.createElement('option');
+                        option.value = data[i].id;
+                        option.text = data[i].name;
+                        cboModelos.appendChild(option);
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    console.error('Error al obtener los modelos de motos:', errorThrown);
+                }
+            });
+        }
+
+        function obtenerSpecDeMotos() {
+            var cboMarcas = document.getElementById('cboMarcas');
+            var cboModelos = document.getElementById('cboModelos');
+            var marcaSeleccionada = cboMarcas.value;
+            var modelosSeleccionada = cboModelos.value;
+
+            // Realiza la solicitud AJAX al controlador para obtener los modelos de motos
+            $.ajax({
+                url: '@Url.Action("obtenerSpecDeMotos", "MotosApi")',
+                type: 'GET',
+                data: { marca: marcaSeleccionada, modelo: modelosSeleccionada },
+                success: function(data) {
+                    // Limpia las opciones anteriores
+                    $('#textarea1').val(data);
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    console.error('Error al obtener los textarea de motos:', errorThrown);
+                }
+            });
+        }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Hacer una solicitud AJAX al controlador para obtener los datos
+    $.ajax({
+        url: '@Url.Action("ObtenerMarcasDeMotos", "MotosApi")',
+        type: 'GET',
+        success: function(data) {
+            var cboMarcas = document.getElementById('cboMarcas');
+            
+            // Llenar el ComboBox con los datos obtenidos
+            for (var i = 0; i < data.length; i++) {
+                var option = document.createElement('option');
+                option.value = data[i].id;
+                option.text = data[i].name;
+                cboMarcas.appendChild(option);
+            }
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            console.error('Error al obtener las marcas de motos:', errorThrown);
+        }
+    });
+</script>

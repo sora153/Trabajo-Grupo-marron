@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Trabajo.DTO
 {
-    public class MotosApiDTO
+    public class MotosApiDTO2
     {
         public int Id { get; set; }
         public string Name { get; set; }
