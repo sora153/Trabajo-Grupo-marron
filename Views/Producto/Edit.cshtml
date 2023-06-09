@@ -3,11 +3,11 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
+<br>
+<h1>Editar</h1>
 
 <h4>Producto</h4>
-<hr />
+<hr>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -44,17 +44,19 @@
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <br>
-            <div class="form-group">
+            <div class="form-group"> <!-- d-grid gap-2 -->
                 <input type="submit" value="Save" class="btn btn-danger btn-lg" />
             </div>
         </form>
     </div>
 </div>
-
+<br>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="textP"><i class="fa-solid fa-arrow-left-long" style="color: #031E49; width: 25px; height: 25px; margin-right: 5px;"></i>Volver</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

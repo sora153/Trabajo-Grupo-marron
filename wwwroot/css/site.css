@@ -20,6 +20,18 @@ html {
 body {
   margin-bottom: 60px;
 }
+.textP {
+  font-family: sans-serif;
+  text-decoration: none; 
+  color: #031E49; 
+  font-size: 25px;
+}
+.textP1 {
+  font-family: sans-serif;
+  text-decoration: none; 
+  color: #81C4FF; 
+  font-size: 25px;
+}
 .card-img-top {
   width: 100px;
   height: 200px;
