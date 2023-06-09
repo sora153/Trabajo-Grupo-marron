@@ -92,7 +92,7 @@ namespace Trabajo.Controllers
             {
                 try
                 {
-                    await _productoService.CreateOrUpdate(producto);
+                    await _productoService.Update(producto);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

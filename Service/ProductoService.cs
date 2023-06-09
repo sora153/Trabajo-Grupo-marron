@@ -31,6 +31,19 @@ namespace Trabajo.Service
             await _context.SaveChangesAsync();
             return p;
         }
+        public async Task<Producto> Update(Producto p){
+                // Regla de Negocio 1
+                if (p.Precio < 1)
+                {
+                    throw new SystemException("No se puede ingresar datos con precio menor a 1 sol");
+                }
+
+                // Regla de Negocio 2
+
+                _context.Update(p);
+                await _context.SaveChangesAsync();
+            return p;
+        }
 
         public async Task<List<Producto>?> GetAll(){
             if(_context.DataProductos == null )

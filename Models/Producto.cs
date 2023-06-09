@@ -12,6 +12,7 @@ namespace Trabajo.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
+      
         public int Id { get; set; }
         public string? Name { get; set; }
 
