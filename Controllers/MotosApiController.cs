@@ -32,7 +32,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri("https://motorcycle-specs-database.p.rapidapi.com/article/2012/BMW/F%20800%20GS%20Trophy"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "4caffe0f73msha769e2268018d23p14c5e1jsncc7bec4533f8" },
+                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -60,7 +60,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri("https://motorcycle-specs-database.p.rapidapi.com/make"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "4caffe0f73msha769e2268018d23p14c5e1jsncc7bec4533f8" },
+                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -121,18 +121,81 @@ namespace Trabajo.Controllers
             List<MotosApiDTO3> spec = new List<MotosApiDTO3>();
 
             foreach (var item in jsonResponse)
+    {
+        var articleInfo = item.articleCompleteInfo;
+        var engineInfo = item.engineAndTransmission;
+        var chassisInfo = item.chassisSuspensionBrakesAndWheels;
+        var measuresInfo = item.physicalMeasuresAndCapacities;
+        var otherInfo = item.otherSpecifications;
+
+        var moto = new MotosApiDTO3
+        {
+            ArticleCompleteInfo = new ArticleCompleteInfo
             {
-                var modelos3 = new MotosApiDTO3
-                {
-                    Id = item.id,
-                    Name = item.name
-                };
-
-                spec.Add(modelos3);
+                ArticleID = articleInfo.articleID,
+                MakeName = articleInfo.makeName,
+                ModelName = articleInfo.modelName,
+                CategoryName = articleInfo.categoryName,
+                YearName = articleInfo.yearName
+            },
+            EngineAndTransmission = new EngineAndTransmission
+            {
+                DisplacementName = engineInfo.displacementName,
+                EngineTypeName = engineInfo.engineTypeName,
+                EngineDetailsName = engineInfo.engineDetailsName,
+                PowerName = engineInfo.powerName,
+                TorqueName = engineInfo.torqueName,
+                CompressionName = engineInfo.compressionName,
+                BoreXStrokeName = engineInfo.boreXStrokeName,
+                ValvesPerCylinderName = engineInfo.valvesPerCylinderName,
+                FuelSystemName = engineInfo.fuelSystemName,
+                LubricationSystemName = engineInfo.lubricationSystemName,
+                CoolingSystemName = engineInfo.coolingSystemName,
+                GearboxName = engineInfo.gearboxName,
+                TransmissionTypeFinalDriveName = engineInfo.transmissionTypeFinalDriveName,
+                ClutchName = engineInfo.clutchName,
+                DrivelineName = engineInfo.drivelineName,
+                ExhaustSystemName = engineInfo.exhaustSystemName
+            },
+            ChassisSuspensionBrakesAndWheels = new ChassisSuspensionBrakesAndWheels
+            {
+                FrameTypeName = chassisInfo.frameTypeName,
+                FrontBrakesName = chassisInfo.frontBrakesName,
+                FrontBrakesDiameterName = chassisInfo.frontBrakesDiameterName,
+                FrontSuspensionName = chassisInfo.frontSuspensionName,
+                FrontTyreName = chassisInfo.frontTyreName,
+                FrontWheelTravelName = chassisInfo.frontWheelTravelName,
+                RakeName = chassisInfo.rakeName,
+                RearBrakesName = chassisInfo.rearBrakesName,
+                RearBrakesDiameterName = chassisInfo.rearBrakesDiameterName,
+                RearSuspensionName = chassisInfo.rearSuspensionName,
+                RearTyreName = chassisInfo.rearTyreName,
+                RearWheelTravelName = chassisInfo.rearWheelTravelName,
+                TrailName = chassisInfo.trailName
+            },
+            PhysicalMeasuresAndCapacities = new PhysicalMeasuresAndCapacities
+            {
+                DryWeightName = measuresInfo.dryWeightName,
+                FuelCapacityName = measuresInfo.fuelCapacityName,
+                OverallHeightName = measuresInfo.overallHeightName,
+                OverallLengthName = measuresInfo.overallLengthName,
+                OverallWidthName = measuresInfo.overallWidthName,
+                PowerWeightRatioName = measuresInfo.powerWeightRatioName,
+                ReserveFuelCapacityName = measuresInfo.reserveFuelCapacityName,
+                SeatHeightName = measuresInfo.seatHeightName
+            },
+            OtherSpecifications = new OtherSpecifications
+            {
+                ColorOptionsName = otherInfo.colorOptionsName,
+                CommentsName = otherInfo.commentsName
             }
+        };
 
-            return spec;
-        }
+        spec.Add(moto);
+    }
+
+    return spec;
+}
 
         public async Task<List<MotosApiDTO2>> ObtenerModelosDeMotos(string marca)
         {
@@ -144,7 +207,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri($"https://motorcycle-specs-database.p.rapidapi.com/model/make-id/{marca}"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "4caffe0f73msha769e2268018d23p14c5e1jsncc7bec4533f8" },
+                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -171,7 +234,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri($"https://motorcycle-specs-database.p.rapidapi.com/make/{marca}/model/{modelo}"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "4caffe0f73msha769e2268018d23p14c5e1jsncc7bec4533f8" },
+                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };

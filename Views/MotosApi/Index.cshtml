@@ -6,27 +6,22 @@
 }
 
 <div class="container">
-    <h1 class="text-center mb-4">Formulario de Tipo Cambio</h1>
+    <h1 class="text-center mb-4">Especificaciones de motos</h1>
     <div class="row justify-content-center">
         <div class="col-md-6">
 
-            <br>
-            <div class="form-group text-center">
-                    <button type="submit" class="btn btn-danger btn-lg">Mostrar especificaciones</button>
-                    <div>
-                    <h1>Obtener Datos de API</h1>
-                    <button onclick="obtenerDatos()">Obtener Datos</button>
-                </div>
-                </div>
-            <div>
+                <h3>Marca</h3>
                 <select id="cboMarcas" onchange="obtenerModelosDeMotos()">
                     <option value="">Seleccionar marca</option>
                 </select>
+                <h3>Modelo</h3>
                 <select id="cboModelos" onchange="obtenerSpecDeMotos()">
                     <option value="">Seleccionar modelo</option>
                 </select>
-                <textarea id="textarea1" name="textarea1" rows="4" cols="50"></textarea>
-                
+                <br>
+                <h3>Especificaciones</h3>
+                <textarea id="textarea1" name="textarea1" rows="4" cols="50" readonly></textarea>
+                <br>
         <a href="http://localhost:5208">volver al inicio</a>
     </div>
         </div>
@@ -107,8 +102,11 @@
         function obtenerSpecDeMotos() {
             var cboMarcas = document.getElementById('cboMarcas');
             var cboModelos = document.getElementById('cboModelos');
-            var marcaSeleccionada = cboMarcas.value;
-            var modelosSeleccionada = cboModelos.value;
+            // var marcaSeleccionada = cboMarcas.value;
+            var marcaSeleccionada = cboMarcas.options[cboMarcas.selectedIndex].textContent;
+            console.log(marcaSeleccionada);
+            // var modelosSeleccionada = cboModelos.value;
+            var modelosSeleccionada = cboModelos.options[cboModelos.selectedIndex].textContent;
 
             // Realiza la solicitud AJAX al controlador para obtener los modelos de motos
             $.ajax({
@@ -116,8 +114,34 @@
                 type: 'GET',
                 data: { marca: marcaSeleccionada, modelo: modelosSeleccionada },
                 success: function(data) {
+                    var text = '';
+
+                    // Recorre los objetos del array 'data' y crea una representación de texto
+                    for (var i = 0; i < data.length; i++) {
+                        var articleInfo = data[i].articleCompleteInfo;
+                        var engineInfo = data[i].engineAndTransmission;
+                        var chassisInfo = data[i].chassisSuspensionBrakesAndWheels;
+                        var physicalInfo = data[i].physicalMeasuresAndCapacities;
+                        var otherInfo = data[i].otherSpecifications;
+
+                        text += 'Id articulo: ' + articleInfo.articleID + '\n';
+                        text += 'Nombre de la marca: ' + articleInfo.makeName + '\n';
+                        text += 'Nombre del modelo: ' + articleInfo.modelName + '\n';
+                        text += 'Nombre de desplazamiento: ' +  engineInfo.displacementName + '\n';
+                        text += 'detalles del motor: ' +  engineInfo.engineDetailsName + '\n';
+                        text += 'Velocidad maxima: ' +  engineInfo.topSpeedName + '\n';
+                        text += 'Nombre del sistema del combustible: ' +  engineInfo.fuelSystemName + '\n';
+                        text += 'Nombre de ignicion : ' +  engineInfo.ignitionName + '\n';
+                        text += 'Nombre del sistema de refrigeración: ' +  engineInfo.coolingSystemName + '\n';
+                        text += 'Tipo de transmisión Nombre de unidad final: ' +  engineInfo.transmissionTypeFinalDriveName+ '\n';
+                        text += 'nombre del embrague: ' +  engineInfo.clutchName + '\n';
+                        // ... mostrar otras propiedades según sea necesario ...
+
+                        text += '\n-------------------\n\n';
+                    }
+
                     // Limpia las opciones anteriores
-                    $('#textarea1').val(data);
+                    $('#textarea1').val(text);
                 },
                 error: function(xhr, textStatus, errorThrown) {
                     console.error('Error al obtener los textarea de motos:', errorThrown);
