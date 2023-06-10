@@ -1,5 +1,6 @@
 @model dynamic;
 @using System.Collections.Generic;
+<body style="background-color: rgba(192, 192, 192, 0.815);"></body>
 
 @{
     ViewData["Title"] = "Carrito";
@@ -7,6 +8,8 @@
     listItemsCarrito = @Model.elementosCarrito;
     Decimal montoTotal = @Model.montoTotal;
 }
+
+
 
 <h1>@ViewData["Title"]</h1>
 
