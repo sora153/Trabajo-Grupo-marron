@@ -1,14 +1,65 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<body style="background-color: rgba(192, 192, 192, 0.815);"></body>
-
-<h1>¿Quienes somos?</h1>
-<p>Somos una de la mas renombradas empresas de repuestos y accesorios para motos en el el peru </p>
-
-<h1>Vision</h1>
-
-<p>Consolidarse entre los primeros productores y distribuidores a nivel nacional, de repuestos exclusivos para motos, con una red de distribución terrestre para todo el país.</p>
-<br>
-<h1>Mision</h1>
-<p>Distribuimos repuestos de motos únicos con sello de calidad.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Empresa - Repuestos y Accesorios para Motos</title>
+    <style>
+      
+        body {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+             color: #fff;
+        }
+        h2 {
+            color: #fff;
+        }
+        p {
+             color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+           max-width: 50%;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¿Quiénes somos?</h1>
+            <p>Somos una de las empresas más reconocidas en el Perú en el campo de repuestos y accesorios para motos.</p>
+        </div>
+        <div class="content">
+            <h2>Visión</h2>
+            <p>Nuestra visión es consolidarnos como uno de los principales productores y distribuidores a nivel nacional de repuestos exclusivos para motos, contando con una amplia red de distribución en todo el país.</p>
+            <h2>Misión</h2>
+            <p>Nuestra misión es distribuir repuestos de motos únicos con un sello de calidad que satisfaga las necesidades de nuestros clientes.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Repuesto 1">
+            <img src="https://images.unsplash.com/photo-1609429019995-8c40f49535a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80" alt="Repuesto 2">
+            <img src="https://images.unsplash.com/photo-1629458369744-1976229ada3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Repuesto 3">
+        </div>
+    </div>
+</body>
+</html>
