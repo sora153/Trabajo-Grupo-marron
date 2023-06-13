@@ -32,7 +32,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri("https://motorcycle-specs-database.p.rapidapi.com/article/2012/BMW/F%20800%20GS%20Trophy"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
+                        { "X-RapidAPI-Key", "42c5f6dff9mshbc3ef692c04d3aep1d196ajsn4948f93fed7f" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -60,7 +60,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri("https://motorcycle-specs-database.p.rapidapi.com/make"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
+                        { "X-RapidAPI-Key", "42c5f6dff9mshbc3ef692c04d3aep1d196ajsn4948f93fed7f" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -207,7 +207,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri($"https://motorcycle-specs-database.p.rapidapi.com/model/make-id/{marca}"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
+                        { "X-RapidAPI-Key", "42c5f6dff9mshbc3ef692c04d3aep1d196ajsn4948f93fed7f" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
@@ -234,7 +234,7 @@ namespace Trabajo.Controllers
                     RequestUri = new Uri($"https://motorcycle-specs-database.p.rapidapi.com/make/{marca}/model/{modelo}"),
                     Headers =
                     {
-                        { "X-RapidAPI-Key", "434ac7397fmshb95fa1ec5d10619p1b1042jsn8f408b46736c" },
+                        { "X-RapidAPI-Key", "42c5f6dff9mshbc3ef692c04d3aep1d196ajsn4948f93fed7f" },
                         { "X-RapidAPI-Host", "motorcycle-specs-database.p.rapidapi.com" },
                     },
                 };
